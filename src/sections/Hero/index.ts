@@ -1,0 +1,6 @@
+export { HeroSection } from './HeroSection'
+export { BackgroundTypography } from './BackgroundTypography'
+export { StationaryPortrait } from './StationaryPortrait'
+export { PanelLayer } from './PanelLayer'
+export { ForegroundTypography } from './ForegroundTypography'
+export { EditorialAnnotations } from './EditorialAnnotations'

@@ -1,0 +1,129 @@
+/* ==========================================================================
+   ANIMATION UTILITIES, MARQUEE KEYFRAMES & REDUCED MOTION SAFEGUARDS
+   ========================================================================== */
+
+@keyframes subtlePulseGlow {
+  0%, 100% {
+    opacity: 0.68;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.96;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes marqueeLeft {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marqueeRight {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+@keyframes scrollPulse {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate3d(0, 7px, 0);
+    opacity: 1;
+  }
+}
+
+.animate-ambient-glow {
+  animation: subtlePulseGlow 7s var(--ease-editorial) infinite;
+}
+
+.animate-marquee-left {
+  animation: marqueeLeft 34s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-right {
+  animation: marqueeRight 38s linear infinite;
+  will-change: transform;
+}
+
+.marquee-group:hover .animate-marquee-left,
+.marquee-group:hover .animate-marquee-right,
+.marquee-group:focus-within .animate-marquee-left,
+.marquee-group:focus-within .animate-marquee-right {
+  animation-play-state: paused;
+}
+
+.animate-scroll-cue {
+  animation: scrollPulse 2.2s var(--ease-editorial) infinite;
+}
+
+/* Interactive Surface Transitions */
+.transition-editorial {
+  transition-property: transform, opacity, background-color, border-color, color, box-shadow;
+  transition-duration: var(--duration-base);
+  transition-timing-function: var(--ease-cinematic);
+}
+
+/* Refined Editorial Link Underline Animation */
+.nav-link-underline {
+  position: relative;
+}
+
+.nav-link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background-color: var(--color-crimson-primary);
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 260ms var(--ease-cinematic);
+}
+
+.nav-link-underline:hover::after,
+.nav-link-underline:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
+/* Clip-path text mask container with generous descender headroom */
+.reveal-mask {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  padding-bottom: 0.06em;
+}
+
+/* Strict Reduced Motion Respect */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-marquee-left,
+  .animate-marquee-right {
+    animation: none !important;
+    transform: none !important;
+    width: auto !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    row-gap: 0.75rem !important;
+  }
+}

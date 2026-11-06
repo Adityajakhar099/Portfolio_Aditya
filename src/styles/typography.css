@@ -1,0 +1,162 @@
+/* ==========================================================================
+   TYPOGRAPHY SYSTEM — Bebas Neue · Manrope Variable · Caveat Variable
+   ========================================================================== */
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-accent {
+  font-family: var(--font-accent);
+}
+
+/* Unified Monumental Hero Lockup (ADITYA JAKHAR) */
+.type-hero-banner {
+  font-family: var(--font-display);
+  font-size: clamp(4.4rem, 19vw, 6.25rem);
+  line-height: 0.84;
+  letter-spacing: 0.018em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+@media (min-width: 640px) {
+  .type-hero-banner {
+    font-size: clamp(5rem, min(12.2vw, 20svh), 12.4rem);
+    line-height: 0.82;
+  }
+}
+
+/* Scene 04 Overlaid Monumental Statement */
+.type-hero-statement {
+  font-family: var(--font-display);
+  font-size: clamp(2.65rem, min(7.5vw, 11.6svh), 7.25rem);
+  line-height: 0.88;
+  letter-spacing: 0.022em;
+  text-transform: uppercase;
+}
+
+.type-stroke-echo {
+  color: transparent;
+  -webkit-text-stroke: 1.25px rgba(245, 242, 239, 0.32);
+}
+
+/* Giant Storytelling Kinetic Typography */
+.type-kinetic-giant {
+  font-family: var(--font-display);
+  font-size: var(--text-kinetic-giant);
+  line-height: 0.85;
+  letter-spacing: 0.018em;
+  text-transform: uppercase;
+}
+
+.type-stroke-ivory {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(245, 242, 239, 0.34);
+}
+
+.type-stroke-crimson {
+  color: transparent;
+  -webkit-text-stroke: 1.75px rgba(229, 9, 37, 0.65);
+}
+
+.type-hero-display {
+  font-family: var(--font-display);
+  font-size: var(--text-hero-display);
+  line-height: 0.86;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+.type-section-display {
+  font-family: var(--font-display);
+  font-size: var(--text-section-display);
+  line-height: 0.89;
+  letter-spacing: 0.022em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+.type-card-display {
+  font-family: var(--font-display);
+  font-size: var(--text-card-display);
+  line-height: 0.94;
+  letter-spacing: 0.026em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+/* Finale Monumental Display */
+.type-finale-display {
+  font-family: var(--font-display);
+  font-size: var(--text-finale-display);
+  line-height: 0.84;
+  letter-spacing: 0.018em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+/* Animated Capability Statement */
+.type-reveal-statement {
+  font-family: var(--font-body);
+  font-size: var(--text-reveal-statement);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+/* Editorial Section Index & Eyebrow */
+.type-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-label-xs);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* Confident Hero Role Positioning (Larger & More Legible) */
+.type-positioning {
+  font-family: var(--font-body);
+  font-size: clamp(0.84rem, 1.02vw, 0.98rem);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+/* Body Prose — Natural Sentence Case & Clean Neutral Contrast */
+.type-body-lg {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: 500;
+  line-height: 1.62;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+}
+
+.type-body {
+  font-family: var(--font-body);
+  font-size: var(--text-body-base);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+/* Minimal Handwritten Accents */
+.type-script {
+  font-family: var(--font-accent);
+  font-size: var(--text-accent-script);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+  color: var(--color-text-primary);
+}

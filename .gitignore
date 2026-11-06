@@ -1,0 +1,47 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Environment & personal credentials
+.env
+.env.*
+.env.local
+!.env.example
+*.pem
+*.key
+*credentials*.json
+*secret*.json
+.claude/settings.local.json
+
+# Temporary build & cache files
+.vite
+*.tsbuildinfo
+.cache
+tmp
+temp
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# AI agent & skill workspaces (local development only)
+.agents/
+.claude/
+skills-lock.json
